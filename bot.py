@@ -1062,6 +1062,19 @@ Family notifications include:
     app.add_handler(CommandHandler("singapore_stats", singapore_stats))
     app.add_handler(CallbackQueryHandler(button_click))
     app.add_handler(MessageHandler(filters.VOICE, voice_handler))
+    # Register location handler for location messages
+    app.add_handler(MessageHandler(filters.LOCATION, location_handler))
+
+    # Catch-all handler to log all updates for debugging
+    async def debug_all_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
+        logger.info(f"[DEBUG] Received update: {update}")
+    app.add_handler(MessageHandler(filters.ALL, debug_all_handler))
+
+    # Add error handler to log exceptions
+    async def error_handler(update, context):
+        logger.error(msg="Exception while handling an update:", exc_info=context.error)
+    app.add_error_handler(error_handler)
+
     # Start polling to keep the bot running
     app.run_polling()
 # --- STUBS FOR MISSING HANDLERS ---
@@ -1073,6 +1086,10 @@ async def simulate_fall(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def voice_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Voice message received. (stub handler)")
+
+async def setup_user_reminders(update, context):
+    """Stub for setup_user_reminders. Implement reminder scheduling here."""
+    pass
 
 # Handler to process family contact input (move to module level)
 async def add_family_contact_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):

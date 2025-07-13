@@ -161,6 +161,18 @@ async def remind(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
 async def button_click(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    # Handle view family contacts
+    if query.data == "view_family":
+        family_contacts = load_family_contacts()
+        user_family = family_contacts.get(user_id, {})
+        if not user_family:
+            await query.edit_message_text("No family contacts found.")
+            return
+        contact_list = "👨‍👩‍👧‍👦 Your Family Contacts:\n\n"
+        for name, info in user_family.items():
+            contact_list += f"• {name}: {info.get('chat_id', 'N/A')}\n"
+        await query.edit_message_text(contact_list)
+        return
     query = update.callback_query
     await query.answer()
     user = update.effective_user.full_name

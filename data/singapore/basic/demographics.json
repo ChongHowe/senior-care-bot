@@ -1,0 +1,137 @@
+[
+  {
+    "town": "Ang Mo Kio",
+    "total_population": 204666,
+    "senior_population_60plus": 33002,
+    "healthcare_facilities": 4,
+    "polyclinics": 1,
+    "elderly_friendly_housing_pct": 0.22,
+    "avg_household_income_sgd": 10321
+  },
+  {
+    "town": "Bedok",
+    "total_population": 184921,
+    "senior_population_60plus": 22020,
+    "healthcare_facilities": 7,
+    "polyclinics": 3,
+    "elderly_friendly_housing_pct": 0.13,
+    "avg_household_income_sgd": 8338
+  },
+  {
+    "town": "Bishan",
+    "total_population": 277954,
+    "senior_population_60plus": 23630,
+    "healthcare_facilities": 8,
+    "polyclinics": 2,
+    "elderly_friendly_housing_pct": 0.12,
+    "avg_household_income_sgd": 11457
+  },
+  {
+    "town": "Bukit Batok",
+    "total_population": 178492,
+    "senior_population_60plus": 34741,
+    "healthcare_facilities": 8,
+    "polyclinics": 1,
+    "elderly_friendly_housing_pct": 0.14,
+    "avg_household_income_sgd": 8202
+  },
+  {
+    "town": "Bukit Merah",
+    "total_population": 106042,
+    "senior_population_60plus": 18132,
+    "healthcare_facilities": 3,
+    "polyclinics": 1,
+    "elderly_friendly_housing_pct": 0.2,
+    "avg_household_income_sgd": 9154
+  },
+  {
+    "town": "Clementi",
+    "total_population": 294341,
+    "senior_population_60plus": 54785,
+    "healthcare_facilities": 8,
+    "polyclinics": 3,
+    "elderly_friendly_housing_pct": 0.24,
+    "avg_household_income_sgd": 7928
+  },
+  {
+    "town": "Hougang",
+    "total_population": 89653,
+    "senior_population_60plus": 50324,
+    "healthcare_facilities": 4,
+    "polyclinics": 2,
+    "elderly_friendly_housing_pct": 0.21,
+    "avg_household_income_sgd": 11464
+  },
+  {
+    "town": "Jurong East",
+    "total_population": 137391,
+    "senior_population_60plus": 52936,
+    "healthcare_facilities": 6,
+    "polyclinics": 1,
+    "elderly_friendly_housing_pct": 0.17,
+    "avg_household_income_sgd": 11160
+  },
+  {
+    "town": "Tampines",
+    "total_population": 214418,
+    "senior_population_60plus": 24094,
+    "healthcare_facilities": 8,
+    "polyclinics": 3,
+    "elderly_friendly_housing_pct": 0.2,
+    "avg_household_income_sgd": 9612
+  },
+  {
+    "town": "Toa Payoh",
+    "total_population": 246970,
+    "senior_population_60plus": 28018,
+    "healthcare_facilities": 8,
+    "polyclinics": 3,
+    "elderly_friendly_housing_pct": 0.25,
+    "avg_household_income_sgd": 10823
+  },
+  {
+    "town": "Woodlands",
+    "total_population": 259719,
+    "senior_population_60plus": 34627,
+    "healthcare_facilities": 8,
+    "polyclinics": 2,
+    "elderly_friendly_housing_pct": 0.21,
+    "avg_household_income_sgd": 9335
+  },
+  {
+    "town": "Yishun",
+    "total_population": 202901,
+    "senior_population_60plus": 16571,
+    "healthcare_facilities": 3,
+    "polyclinics": 3,
+    "elderly_friendly_housing_pct": 0.12,
+    "avg_household_income_sgd": 11416
+  },
+  {
+    "town": "Sengkang",
+    "total_population": 194287,
+    "senior_population_60plus": 50981,
+    "healthcare_facilities": 5,
+    "polyclinics": 2,
+    "elderly_friendly_housing_pct": 0.22,
+    "avg_household_income_sgd": 7715
+  },
+  {
+    "town": "Punggol",
+    "total_population": 166072,
+    "senior_population_60plus": 44543,
+    "healthcare_facilities": 8,
+    "polyclinics": 1,
+    "elderly_friendly_housing_pct": 0.18,
+    "avg_household_income_sgd": 10941
+  },
+  {
+    "town": "Serangoon",
+    "total_population": 283289,
+    "senior_population_60plus": 17277,
+    "healthcare_facilities": 5,
+    "polyclinics": 1,
+    "elderly_friendly_housing_pct": 0.13,
+    "avg_household_income_sgd": 9717
+  }
+]

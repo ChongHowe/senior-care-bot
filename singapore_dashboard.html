@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🇸🇬 Singapore Senior Care Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            border-radius: 10px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .stat-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border-left: 5px solid #007bff;
+        }
+        .stat-card h3 {
+            margin: 0 0 10px 0;
+            color: #007bff;
+        }
+        .stat-card .number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #333;
+        }
+        .chart-container {
+            width: 100%;
+            margin: 20px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        .chart-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .chart-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .chart-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+        }
+        @media (max-width: 768px) {
+            .chart-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🇸🇬 Singapore Senior Care Analytics Dashboard</h1>
+            <p>Capstone Project: AI-Powered Senior Healthcare Platform</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>📊 Total Population</h3>
+                <div class="number" id="totalPop">3,041,116</div>
+            </div>
+            <div class="stat-card">
+                <h3>👴 Senior Population</h3>
+                <div class="number" id="seniorPop">505,681</div>
+            </div>
+            <div class="stat-card">
+                <h3>🏥 Healthcare Facilities</h3>
+                <div class="number" id="healthFacilities">67</div>
+            </div>
+            <div class="stat-card">
+                <h3>🤖 Bot Users</h3>
+                <div class="number" id="botUsers">100</div>
+            </div>
+        </div>
+
+        <div class="chart-grid">
+            <!-- Chart 1: Senior Population by Town -->
+            <div class="chart-box">
+                <div class="chart-title">🏘️ Senior Population by Town (Top 10)</div>
+                <canvas id="townChart" width="400" height="300"></canvas>
+            </div>
+
+            <!-- Chart 2: Health Conditions Prevalence -->
+            <div class="chart-box">
+                <div class="chart-title">🏥 Health Conditions Prevalence</div>
+                <canvas id="healthChart" width="400" height="300"></canvas>
+            </div>
+
+            <!-- Chart 3: Language Preferences -->
+            <div class="chart-box">
+                <div class="chart-title">🗣️ Language Preferences</div>
+                <canvas id="languageChart" width="400" height="300"></canvas>
+            </div>
+
+            <!-- Chart 4: ML Model Performance -->
+            <div class="chart-box">
+                <div class="chart-title">🤖 ML Model Performance</div>
+                <canvas id="mlChart" width="400" height="300"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Singapore data (from our generated datasets)
+        const singaporeData = {
+            towns: [
+                'Ang Mo Kio', 'Bedok', 'Bishan', 'Bukit Batok', 'Bukit Merah',
+                'Clementi', 'Hougang', 'Jurong East', 'Tampines', 'Toa Payoh'
+            ],
+            seniorPopulation: [45120, 42380, 38950, 35670, 41200, 33890, 44560, 39870, 43290, 36840],
+            healthConditions: {
+                'Diabetes': 26.2,
+                'Hypertension': 24.6,
+                'Heart Disease': 28.7,
+                'Stroke': 23.8,
+                'Kidney Disease': 28.7
+            },
+            languages: {
+                'English': 31,
+                'Mandarin': 22,
+                'Malay': 21,
+                'Tamil': 26
+            },
+            mlModels: {
+                'Medication Adherence': 87,
+                'Fall Risk Assessment': 82,
+                'Health Anomaly Detection': 91
+            }
+        };
+
+        // Chart 1: Senior Population by Town
+        const townCtx = document.getElementById('townChart').getContext('2d');
+        new Chart(townCtx, {
+            type: 'bar',
+            data: {
+                labels: singaporeData.towns,
+                datasets: [{
+                    label: 'Senior Population (60+)',
+                    data: singaporeData.seniorPopulation,
+                    backgroundColor: 'rgba(54, 162, 235, 0.8)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Number of Seniors'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+
+        // Chart 2: Health Conditions
+        const healthCtx = document.getElementById('healthChart').getContext('2d');
+        new Chart(healthCtx, {
+            type: 'doughnut',
+            data: {
+                labels: Object.keys(singaporeData.healthConditions),
+                datasets: [{
+                    data: Object.values(singaporeData.healthConditions),
+                    backgroundColor: [
+                        '#FF6384',
+                        '#36A2EB',
+                        '#FFCE56',
+                        '#4BC0C0',
+                        '#9966FF'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }
+        });
+
+        // Chart 3: Language Preferences
+        const languageCtx = document.getElementById('languageChart').getContext('2d');
+        new Chart(languageCtx, {
+            type: 'pie',
+            data: {
+                labels: Object.keys(singaporeData.languages),
+                datasets: [{
+                    data: Object.values(singaporeData.languages),
+                    backgroundColor: [
+                        '#FF6384',
+                        '#36A2EB',
+                        '#FFCE56',
+                        '#4BC0C0'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }
+        });
+
+        // Chart 4: ML Model Performance
+        const mlCtx = document.getElementById('mlChart').getContext('2d');
+        new Chart(mlCtx, {
+            type: 'radar',
+            data: {
+                labels: Object.keys(singaporeData.mlModels),
+                datasets: [{
+                    label: 'Accuracy (%)',
+                    data: Object.values(singaporeData.mlModels),
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 2,
+                    pointBackgroundColor: 'rgba(255, 99, 132, 1)'
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    r: {
+                        beginAtZero: true,
+                        max: 100,
+                        title: {
+                            display: true,
+                            text: 'Performance (%)'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Add some animation and interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate numbers
+            function animateNumber(element, start, end, duration) {
+                let startTime = null;
+                function animate(currentTime) {
+                    if (!startTime) startTime = currentTime;
+                    const progress = Math.min((currentTime - startTime) / duration, 1);
+                    const current = Math.floor(progress * (end - start) + start);
+                    element.textContent = current.toLocaleString();
+                    if (progress < 1) {
+                        requestAnimationFrame(animate);
+                    }
+                }
+                requestAnimationFrame(animate);
+            }
+
+            // Animate the stat cards
+            setTimeout(() => {
+                animateNumber(document.getElementById('totalPop'), 0, 3041116, 2000);
+                animateNumber(document.getElementById('seniorPop'), 0, 505681, 2000);
+                animateNumber(document.getElementById('healthFacilities'), 0, 67, 1000);
+                animateNumber(document.getElementById('botUsers'), 0, 100, 1000);
+            }, 500);
+        });
+    </script>
+</body>
+</html>

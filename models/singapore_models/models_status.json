@@ -1,0 +1,34 @@
+{
+  "medication_adherence_model": {
+    "status": "simulated",
+    "accuracy": 0.87,
+    "features": [
+      "age",
+      "chronic_conditions",
+      "family_support",
+      "hdb_type"
+    ],
+    "last_trained": "2025-07-12T19:15:00.113563"
+  },
+  "fall_risk_model": {
+    "status": "simulated",
+    "r2_score": 0.82,
+    "features": [
+      "age",
+      "medications",
+      "mobility",
+      "home_hazards"
+    ],
+    "last_trained": "2025-07-12T19:15:00.113591"
+  },
+  "health_anomaly_model": {
+    "status": "simulated",
+    "accuracy": 0.91,
+    "features": [
+      "daily_activity",
+      "vital_signs",
+      "medication_compliance"
+    ],
+    "last_trained": "2025-07-12T19:15:00.113594"
+  }
+}

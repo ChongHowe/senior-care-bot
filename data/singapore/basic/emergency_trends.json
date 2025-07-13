@@ -1,0 +1,44 @@
+[
+  {
+    "date": "2025-07-12",
+    "fall_alerts": 3,
+    "medication_missed_alerts": 12,
+    "emergency_locations": 1
+  },
+  {
+    "date": "2025-07-11",
+    "fall_alerts": 0,
+    "medication_missed_alerts": 7,
+    "emergency_locations": 1
+  },
+  {
+    "date": "2025-07-10",
+    "fall_alerts": 2,
+    "medication_missed_alerts": 13,
+    "emergency_locations": 0
+  },
+  {
+    "date": "2025-07-09",
+    "fall_alerts": 0,
+    "medication_missed_alerts": 5,
+    "emergency_locations": 0
+  },
+  {
+    "date": "2025-07-08",
+    "fall_alerts": 1,
+    "medication_missed_alerts": 18,
+    "emergency_locations": 2
+  },
+  {
+    "date": "2025-07-07",
+    "fall_alerts": 1,
+    "medication_missed_alerts": 20,
+    "emergency_locations": 2
+  },
+  {
+    "date": "2025-07-06",
+    "fall_alerts": 3,
+    "medication_missed_alerts": 6,
+    "emergency_locations": 1
+  }
+]

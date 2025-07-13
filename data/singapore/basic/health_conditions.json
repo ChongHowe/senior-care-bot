@@ -1,0 +1,177 @@
+[
+  {
+    "district": "Central",
+    "condition": "Diabetes",
+    "prevalence_rate": 0.186,
+    "estimated_cases": 20399,
+    "year": 2024
+  },
+  {
+    "district": "Central",
+    "condition": "Hypertension",
+    "prevalence_rate": 0.187,
+    "estimated_cases": 8380,
+    "year": 2024
+  },
+  {
+    "district": "Central",
+    "condition": "Heart Disease",
+    "prevalence_rate": 0.255,
+    "estimated_cases": 21004,
+    "year": 2024
+  },
+  {
+    "district": "Central",
+    "condition": "Stroke",
+    "prevalence_rate": 0.342,
+    "estimated_cases": 14273,
+    "year": 2024
+  },
+  {
+    "district": "Central",
+    "condition": "Kidney Disease",
+    "prevalence_rate": 0.23,
+    "estimated_cases": 6877,
+    "year": 2024
+  },
+  {
+    "district": "East",
+    "condition": "Diabetes",
+    "prevalence_rate": 0.267,
+    "estimated_cases": 20997,
+    "year": 2024
+  },
+  {
+    "district": "East",
+    "condition": "Hypertension",
+    "prevalence_rate": 0.224,
+    "estimated_cases": 6983,
+    "year": 2024
+  },
+  {
+    "district": "East",
+    "condition": "Heart Disease",
+    "prevalence_rate": 0.178,
+    "estimated_cases": 5624,
+    "year": 2024
+  },
+  {
+    "district": "East",
+    "condition": "Stroke",
+    "prevalence_rate": 0.157,
+    "estimated_cases": 9900,
+    "year": 2024
+  },
+  {
+    "district": "East",
+    "condition": "Kidney Disease",
+    "prevalence_rate": 0.29,
+    "estimated_cases": 14024,
+    "year": 2024
+  },
+  {
+    "district": "North",
+    "condition": "Diabetes",
+    "prevalence_rate": 0.318,
+    "estimated_cases": 24368,
+    "year": 2024
+  },
+  {
+    "district": "North",
+    "condition": "Hypertension",
+    "prevalence_rate": 0.228,
+    "estimated_cases": 6244,
+    "year": 2024
+  },
+  {
+    "district": "North",
+    "condition": "Heart Disease",
+    "prevalence_rate": 0.322,
+    "estimated_cases": 13551,
+    "year": 2024
+  },
+  {
+    "district": "North",
+    "condition": "Stroke",
+    "prevalence_rate": 0.277,
+    "estimated_cases": 10441,
+    "year": 2024
+  },
+  {
+    "district": "North",
+    "condition": "Kidney Disease",
+    "prevalence_rate": 0.311,
+    "estimated_cases": 17568,
+    "year": 2024
+  },
+  {
+    "district": "North-East",
+    "condition": "Diabetes",
+    "prevalence_rate": 0.268,
+    "estimated_cases": 19068,
+    "year": 2024
+  },
+  {
+    "district": "North-East",
+    "condition": "Hypertension",
+    "prevalence_rate": 0.323,
+    "estimated_cases": 20543,
+    "year": 2024
+  },
+  {
+    "district": "North-East",
+    "condition": "Heart Disease",
+    "prevalence_rate": 0.338,
+    "estimated_cases": 12742,
+    "year": 2024
+  },
+  {
+    "district": "North-East",
+    "condition": "Stroke",
+    "prevalence_rate": 0.164,
+    "estimated_cases": 19673,
+    "year": 2024
+  },
+  {
+    "district": "North-East",
+    "condition": "Kidney Disease",
+    "prevalence_rate": 0.26,
+    "estimated_cases": 18066,
+    "year": 2024
+  },
+  {
+    "district": "West",
+    "condition": "Diabetes",
+    "prevalence_rate": 0.271,
+    "estimated_cases": 5518,
+    "year": 2024
+  },
+  {
+    "district": "West",
+    "condition": "Hypertension",
+    "prevalence_rate": 0.267,
+    "estimated_cases": 17698,
+    "year": 2024
+  },
+  {
+    "district": "West",
+    "condition": "Heart Disease",
+    "prevalence_rate": 0.34,
+    "estimated_cases": 16114,
+    "year": 2024
+  },
+  {
+    "district": "West",
+    "condition": "Stroke",
+    "prevalence_rate": 0.251,
+    "estimated_cases": 17093,
+    "year": 2024
+  },
+  {
+    "district": "West",
+    "condition": "Kidney Disease",
+    "prevalence_rate": 0.344,
+    "estimated_cases": 24810,
+    "year": 2024
+  }
+]

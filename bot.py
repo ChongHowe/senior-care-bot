@@ -175,31 +175,37 @@ async def button_click(update: Update, context: ContextTypes.DEFAULT_TYPE):
         med_key = query.data[4:]  # Remove "med_" prefix
         await add_medication_to_user(user_id, med_key)
         await setup_user_reminders(update, context)
-        
         # Notify family of schedule change
         await notify_family_schedule_change(
             context, user_id, user, 
             MEDICATION_TYPES[med_key]['name'], 
             "added"
         )
-        
         await query.edit_message_text(
             text=f"✅ {MEDICATION_TYPES[med_key]['name']} added to your schedule!\n"
                  f"You'll receive reminders at: {', '.join(MEDICATION_TYPES[med_key]['times'])}\n\n"
                  f"👨‍👩‍👧‍👦 Your family has been notified of this change."
         )
         return
-    
+
+    # Handle add family contact
+    if query.data.startswith("add_family_"):
+        relationship = query.data.replace("add_family_", "")
+        context.user_data["adding_family"] = relationship
+        await query.edit_message_text(
+            text=f"Please enter the Telegram username (with @) or chat ID for your {relationship}."
+        )
+        return
+
     # Handle view schedule
     if query.data == "view_schedule":
         medications = load_user_medications()
         user_meds = medications.get(user_id, {})
-        
         if not user_meds:
             await query.edit_message_text("📋 You don't have any medications scheduled yet.")
             return
         # ...existing code...
-    
+
     # Schedule weekly reports
     context.job_queue.run_repeating(
         send_weekly_report,
@@ -211,7 +217,7 @@ async def button_click(update: Update, context: ContextTypes.DEFAULT_TYPE):
         },
         name=f"weekly_report_{user_id}"
     )
-    
+
     # Schedule daily activity check
     context.job_queue.run_repeating(
         check_user_activity,

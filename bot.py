@@ -1132,9 +1132,10 @@ async def add_family_contact_handler(update: Update, context: ContextTypes.DEFAU
         family_contacts = load_family_contacts()
         if user_id not in family_contacts:
             family_contacts[user_id] = {}
+        # Always add or update the contact for this relationship
         family_contacts[user_id][contact_name] = {"chat_id": chat_id}
         save_family_contacts(family_contacts)
-        await update.message.reply_text(f"✅ {contact_name} added as a family contact! They will now receive notifications.")
+        await update.message.reply_text(f"✅ {contact_name} added/updated as a family contact! They will now receive notifications.")
     else:
         return  # Not in add mode, ignore
 

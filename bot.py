@@ -1071,6 +1071,9 @@ Family notifications include:
     # Register location handler for location messages
     app.add_handler(MessageHandler(filters.LOCATION, location_handler))
 
+    # Register handler for family contact input (text messages)
+    app.add_handler(MessageHandler(filters.TEXT & (~filters.COMMAND), add_family_contact_handler))
+
     # Catch-all handler to log all updates for debugging
     async def debug_all_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
         logger.info(f"[DEBUG] Received update: {update}")

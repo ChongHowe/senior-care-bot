@@ -1062,6 +1062,8 @@ Family notifications include:
     app.add_handler(CommandHandler("singapore_stats", singapore_stats))
     app.add_handler(CallbackQueryHandler(button_click))
     app.add_handler(MessageHandler(filters.VOICE, voice_handler))
+    # Start polling to keep the bot running
+    app.run_polling()
 # --- STUBS FOR MISSING HANDLERS ---
 async def fall(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("🚨 Fall detected! (stub handler)")

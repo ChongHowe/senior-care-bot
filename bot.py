@@ -188,6 +188,7 @@ async def button_click(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if not update.callback_query:
         return
     query = update.callback_query
+    logger.info(f"[DEBUG] button_click callback_data: {query.data}")
     await query.answer()
     user = update.effective_user.full_name
     user_id = str(update.effective_user.id)

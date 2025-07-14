@@ -161,6 +161,16 @@ async def remind(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
 async def button_click(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    if not update.callback_query:
+        return
+    query = update.callback_query
+    await query.answer()
+    user = update.effective_user.full_name
+    user_id = str(update.effective_user.id)
+    now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    # Update user activity
+    update_user_activity(user_id)
+
     # Handle view family contacts
     if query.data == "view_family":
         family_contacts = load_family_contacts()
@@ -173,16 +183,7 @@ async def button_click(update: Update, context: ContextTypes.DEFAULT_TYPE):
             contact_list += f"• {name}: {info.get('chat_id', 'N/A')}\n"
         await query.edit_message_text(contact_list)
         return
-    if not update.callback_query:
-        return
-    query = update.callback_query
-    await query.answer()
-    user = update.effective_user.full_name
-    user_id = str(update.effective_user.id)
-    now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    # Update user activity
-    update_user_activity(user_id)
-    
+
     # Handle medication selection
     if query.data.startswith("med_"):
         med_key = query.data[4:]  # Remove "med_" prefix

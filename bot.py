@@ -187,18 +187,9 @@ async def button_click(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # Handle medication selection
     if query.data.startswith("med_"):
         med_key = query.data[4:]  # Remove "med_" prefix
-        await add_medication_to_user(user_id, med_key)
-        await setup_user_reminders(update, context)
-        # Notify family of schedule change
-        await notify_family_schedule_change(
-            context, user_id, user, 
-            MEDICATION_TYPES[med_key]['name'], 
-            "added"
-        )
+        context.user_data["adding_medication"] = med_key
         await query.edit_message_text(
-            text=f"✅ {MEDICATION_TYPES[med_key]['name']} added to your schedule!\n"
-                 f"You'll receive reminders at: {', '.join(MEDICATION_TYPES[med_key]['times'])}\n\n"
-                 f"👨‍👩‍👧‍👦 Your family has been notified of this change."
+            text=f"Enter reminder times for {MEDICATION_TYPES[med_key]['name']} (24h format, comma separated, e.g., 08:00, 20:00):"
         )
         return
 
@@ -328,12 +319,8 @@ async def schedule(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def add_medication_to_user(user_id: str, med_key: str):
     """Add a medication type to user's schedule"""
-    medications = load_user_medications()
-    if user_id not in medications:
-        medications[user_id] = {}
-    
-    medications[user_id][med_key] = MEDICATION_TYPES[med_key].copy()
-    save_user_medications(medications)
+    # Deprecated: replaced by new handler with custom times
+    pass
 
 async def notify_family_missed_medication(context: ContextTypes.DEFAULT_TYPE):
     """Notify family when medication is missed"""
@@ -1116,6 +1103,43 @@ async def setup_user_reminders(update, context):
 
 # Handler to process family contact input (move to module level)
 async def add_family_contact_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    # Handle custom medication time input
+    if "adding_medication" in context.user_data:
+        med_key = context.user_data.pop("adding_medication")
+        user_id = str(update.effective_user.id)
+        times_input = update.message.text.strip()
+        # Validate and parse times
+        times = [t.strip() for t in times_input.split(",") if t.strip()]
+        # Optionally: validate time format (HH:MM)
+        valid_times = []
+        for t in times:
+            try:
+                h, m = map(int, t.split(":"))
+                if 0 <= h < 24 and 0 <= m < 60:
+                    valid_times.append(f"{h:02d}:{m:02d}")
+            except:
+                continue
+        if not valid_times:
+            await update.message.reply_text("❌ Invalid time format. Please enter times as HH:MM, separated by commas.")
+            context.user_data["adding_medication"] = med_key
+            return
+        # Save to user medications
+        medications = load_user_medications()
+        if user_id not in medications:
+            medications[user_id] = {}
+        med_info = MEDICATION_TYPES[med_key].copy()
+        med_info["times"] = valid_times
+        medications[user_id][med_key] = med_info
+        save_user_medications(medications)
+        await update.message.reply_text(
+            f"✅ {med_info['name']} added to your schedule! You'll receive reminders at: {', '.join(valid_times)}"
+        )
+        # Optionally: notify family
+        await notify_family_schedule_change(
+            context, user_id, update.effective_user.full_name,
+            med_info['name'], "added"
+        )
+        return
     user_id = str(update.effective_user.id)
     if "adding_family" in context.user_data:
         relationship = context.user_data.pop("adding_family")

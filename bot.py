@@ -161,6 +161,21 @@ async def remind(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
 async def button_click(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    # Handle view schedule
+    if query.data == "view_schedule":
+        medications = load_user_medications()
+        user_meds = medications.get(user_id, {})
+        if not user_meds:
+            await query.edit_message_text("📋 You don't have any medications scheduled yet. Use /medications to add some!")
+            return
+        schedule_text = "📋 Your Medication Schedule:\n\n"
+        for med_key, med_info in user_meds.items():
+            schedule_text += f"{med_info['emoji']} {med_info['name']}\n"
+            for time_str in med_info.get('times', []):
+                schedule_text += f"   ⏰ {time_str}\n"
+            schedule_text += "\n"
+        await query.edit_message_text(schedule_text)
+        return
     if not update.callback_query:
         return
     query = update.callback_query

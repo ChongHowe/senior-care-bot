@@ -161,6 +161,15 @@ async def remind(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
 async def button_click(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    # Handle medication selection
+    if query.data.startswith("med_"):
+        med_key = query.data[4:]  # Remove "med_" prefix
+        context.user_data["adding_medication"] = med_key
+        await query.edit_message_text(
+            text=f"Enter reminder times for {MEDICATION_TYPES[med_key]['name']} (24h format, comma separated, e.g., 08:00, 20:00):"
+        )
+        return
+
     # Handle view schedule
     if query.data == "view_schedule":
         medications = load_user_medications()

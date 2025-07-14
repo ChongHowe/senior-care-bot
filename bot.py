@@ -161,6 +161,11 @@ async def remind(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
 async def button_click(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    if not update.callback_query:
+        return
+    query = update.callback_query
+    logger.info(f"[DEBUG] button_click callback_data: {query.data}")
+
     # Handle medication selection
     if query.data.startswith("med_"):
         med_key = query.data[4:]  # Remove "med_" prefix
@@ -172,6 +177,8 @@ async def button_click(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     # Handle view schedule
     if query.data == "view_schedule":
+        user = update.effective_user.full_name
+        user_id = str(update.effective_user.id)
         medications = load_user_medications()
         user_meds = medications.get(user_id, {})
         if not user_meds:

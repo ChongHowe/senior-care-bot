@@ -1,0 +1,51 @@
+user_id,age,chronic_conditions_count,medications_per_day,singapore_town,hdb_flat_type,pioneer_generation,medisave_balance,has_family_nearby,preferred_language,healthcare_subsidy_eligible
+user_001,72,2,3,Punggol,3-room,0,26804.925054995474,0,Mandarin,1
+user_002,78,1,2,Bishan,2-room,1,35710.41524117509,1,Malay,0
+user_003,81,3,4,Queenstown,3-room,0,28241.66352488442,1,Mandarin,1
+user_004,69,2,2,Sengkang,2-room,0,23698.569456323155,1,English,1
+user_005,75,1,3,Marine Parade,4-room,0,18008.534219080826,1,English,1
+user_006,68,2,2,Geylang,4-room,1,24911.829537541922,1,Malay,1
+user_007,74,1,3,Bukit Panjang,2-room,1,20289.61694381677,0,Tamil,0
+user_008,80,2,4,Ang Mo Kio,5-room,0,27320.499373576364,1,Mandarin,0
+user_009,77,3,5,Queenstown,4-room,0,33576.596232020194,0,English,0
+user_010,70,2,3,Yishun,4-room,1,23400.614700365728,1,Mandarin,1
+user_011,73,1,2,Woodlands,3-room,0,21567.98763368832,1,English,1
+user_012,79,2,3,Kallang/Whampoa,5-room,0,29576.764544288388,1,English,1
+user_013,76,2,4,Sembawang,2-room,0,17981.865574723997,1,Mandarin,0
+user_014,82,3,5,Tampines,1-room,0,15328.889453990332,1,Malay,1
+user_015,71,1,2,Sengkang,3-room,0,3761.0427569019303,1,English,1
+user_016,67,2,3,Serangoon,1-room,0,19742.449783192387,1,Mandarin,0
+user_017,78,2,4,Jurong East,5-room,1,11797.667929793579,1,Malay,0
+user_018,69,1,2,Tampines,3-room,1,43314.58765854353,1,Tamil,0
+user_019,75,2,3,Yishun,3-room,1,27756.351578874077,1,English,0
+user_020,72,3,4,Marine Parade,2-room,0,27787.23034970661,1,Mandarin,1
+user_021,74,2,3,Tampines,4-room,1,20499.345285207564,1,English,1
+user_022,80,1,2,Jurong East,3-room,1,31228.499323474985,1,English,0
+user_023,77,2,4,Bukit Timah,4-room,0,26148.614682138956,1,Mandarin,1
+user_024,70,3,5,Woodlands,4-room,0,40512.62854732971,1,Mandarin,1
+user_025,73,2,3,Geylang,3-room,0,7691.268962344326,1,Malay,0
+user_026,79,1,2,Bukit Panjang,4-room,1,39443.38791981811,0,Mandarin,1
+user_027,76,2,3,Bukit Batok,4-room,1,26280.410685584604,1,English,1
+user_028,82,3,4,Geylang,2-room,0,20186.616507202747,0,English,0
+user_029,71,2,2,Central Area,2-room,0,34971.1522189782,1,Tamil,1
+user_030,67,1,3,Queenstown,1-room,0,22646.81258092748,0,English,0
+user_031,78,2,4,Ang Mo Kio,4-room,0,12815.103587134145,0,English,1
+user_032,69,3,5,Toa Payoh,5-room,1,13396.749747306942,0,English,1
+user_033,75,2,3,Pasir Ris,4-room,1,32996.91222585207,0,Mandarin,1
+user_034,72,1,2,Bedok,4-room,0,25690.055113590333,0,Mandarin,1
+user_035,74,2,3,Jurong West,4-room,0,21417.907995092206,1,English,1
+user_036,80,3,4,Clementi,4-room,1,34018.63437017887,0,Mandarin,0
+user_037,77,2,5,Jurong East,4-room,0,24920.273586833828,0,Mandarin,1
+user_038,70,1,3,Central Area,4-room,0,39799.44138890026,1,English,1
+user_039,73,2,2,Bedok,3-room,0,29965.78158964799,0,English,0
+user_040,79,3,4,Marine Parade,2-room,0,23057.486117659653,0,English,1
+user_041,76,2,3,Tampines,2-room,0,26739.663291695695,1,English,1
+user_042,82,1,2,Toa Payoh,4-room,1,34078.71947242427,1,Mandarin,1
+user_043,71,2,4,Jurong East,4-room,0,17367.40843457483,1,English,0
+user_044,67,3,5,Yishun,4-room,0,6951.17899335481,1,Malay,0
+user_045,78,2,3,Bishan,2-room,0,18980.313211036155,1,Mandarin,1
+user_046,69,1,2,Toa Payoh,4-room,1,32602.510946353603,0,Malay,1
+user_047,75,2,3,Punggol,2-room,1,25865.897874729,1,Malay,0
+user_048,72,3,4,Choa Chu Kang,4-room,1,23443.227646079205,1,English,0
+user_049,74,2,3,Jurong West,4-room,0,22297.96681322462,1,English,0
+user_050,80,1,2,Queenstown,4-room,0,34476.16937661409,1,Mandarin,0

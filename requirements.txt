@@ -3,8 +3,8 @@ python-dotenv==1.0.0
 requests==2.31.0
 
 # Singapore Capstone Project Dependencies
-pandas==2.1.4
-numpy==1.24.3
+pandas
+numpy
 scikit-learn==1.3.2
 matplotlib==3.8.2
 seaborn==0.13.0

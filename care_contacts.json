@@ -1,0 +1,16 @@
+{
+  "7808456068": {
+    "caregiver": {
+      "name": "Caregiver Liese",
+      "chat_id": 5888218397 
+    },
+    "doctor": {
+      "name": "Dr. Chloe Oon",
+      "chat_id": 96470362
+    },
+    "emergency": {
+      "name": "Singapore Emergency Services",
+      "chat_id": 112
+    }
+  }
+}

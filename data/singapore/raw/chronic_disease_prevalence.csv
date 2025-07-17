@@ -1,0 +1,151 @@
+district,age_group,condition,prevalence_rate,estimated_cases,year
+Central,60-64,Diabetes,0.25,274,2024
+Central,60-64,Hypertension,0.35,340,2024
+Central,60-64,Heart Disease,0.15,169,2024
+Central,60-64,Stroke,0.08,104,2024
+Central,60-64,Kidney Disease,0.12,114,2024
+Central,65-69,Diabetes,0.275,262,2024
+Central,65-69,Hypertension,0.385,506,2024
+Central,65-69,Heart Disease,0.165,190,2024
+Central,65-69,Stroke,0.088,79,2024
+Central,65-69,Kidney Disease,0.132,146,2024
+Central,70-74,Diabetes,0.3,272,2024
+Central,70-74,Hypertension,0.42,380,2024
+Central,70-74,Heart Disease,0.18,188,2024
+Central,70-74,Stroke,0.096,59,2024
+Central,70-74,Kidney Disease,0.144,94,2024
+Central,75-79,Diabetes,0.325,288,2024
+Central,75-79,Hypertension,0.455,362,2024
+Central,75-79,Heart Disease,0.195,207,2024
+Central,75-79,Stroke,0.104,85,2024
+Central,75-79,Kidney Disease,0.156,111,2024
+Central,80-84,Diabetes,0.35,452,2024
+Central,80-84,Hypertension,0.49,467,2024
+Central,80-84,Heart Disease,0.21,212,2024
+Central,80-84,Stroke,0.112,80,2024
+Central,80-84,Kidney Disease,0.168,149,2024
+Central,85+,Diabetes,0.375,383,2024
+Central,85+,Hypertension,0.525,404,2024
+Central,85+,Heart Disease,0.225,241,2024
+Central,85+,Stroke,0.12,105,2024
+Central,85+,Kidney Disease,0.18,169,2024
+East,60-64,Diabetes,0.275,241,2024
+East,60-64,Hypertension,0.385,527,2024
+East,60-64,Heart Disease,0.165,164,2024
+East,60-64,Stroke,0.088,69,2024
+East,60-64,Kidney Disease,0.132,153,2024
+East,65-69,Diabetes,0.303,228,2024
+East,65-69,Hypertension,0.424,441,2024
+East,65-69,Heart Disease,0.182,110,2024
+East,65-69,Stroke,0.097,71,2024
+East,65-69,Kidney Disease,0.145,150,2024
+East,70-74,Diabetes,0.33,378,2024
+East,70-74,Hypertension,0.462,477,2024
+East,70-74,Heart Disease,0.198,193,2024
+East,70-74,Stroke,0.106,99,2024
+East,70-74,Kidney Disease,0.158,111,2024
+East,75-79,Diabetes,0.358,306,2024
+East,75-79,Hypertension,0.5,454,2024
+East,75-79,Heart Disease,0.215,259,2024
+East,75-79,Stroke,0.114,122,2024
+East,75-79,Kidney Disease,0.172,111,2024
+East,80-84,Diabetes,0.385,409,2024
+East,80-84,Hypertension,0.539,497,2024
+East,80-84,Heart Disease,0.231,199,2024
+East,80-84,Stroke,0.123,138,2024
+East,80-84,Kidney Disease,0.185,222,2024
+East,85+,Diabetes,0.413,489,2024
+East,85+,Hypertension,0.577,480,2024
+East,85+,Heart Disease,0.247,232,2024
+East,85+,Stroke,0.132,140,2024
+East,85+,Kidney Disease,0.198,236,2024
+North,60-64,Diabetes,0.237,214,2024
+North,60-64,Hypertension,0.332,320,2024
+North,60-64,Heart Disease,0.142,110,2024
+North,60-64,Stroke,0.076,57,2024
+North,60-64,Kidney Disease,0.114,132,2024
+North,65-69,Diabetes,0.261,332,2024
+North,65-69,Hypertension,0.366,360,2024
+North,65-69,Heart Disease,0.157,188,2024
+North,65-69,Stroke,0.084,89,2024
+North,65-69,Kidney Disease,0.125,109,2024
+North,70-74,Diabetes,0.285,305,2024
+North,70-74,Hypertension,0.399,521,2024
+North,70-74,Heart Disease,0.171,169,2024
+North,70-74,Stroke,0.091,119,2024
+North,70-74,Kidney Disease,0.137,65,2024
+North,75-79,Diabetes,0.309,359,2024
+North,75-79,Hypertension,0.432,439,2024
+North,75-79,Heart Disease,0.185,174,2024
+North,75-79,Stroke,0.099,100,2024
+North,75-79,Kidney Disease,0.148,89,2024
+North,80-84,Diabetes,0.332,317,2024
+North,80-84,Hypertension,0.465,498,2024
+North,80-84,Heart Disease,0.199,258,2024
+North,80-84,Stroke,0.106,95,2024
+North,80-84,Kidney Disease,0.16,133,2024
+North,85+,Diabetes,0.356,320,2024
+North,85+,Hypertension,0.499,590,2024
+North,85+,Heart Disease,0.214,227,2024
+North,85+,Stroke,0.114,101,2024
+North,85+,Kidney Disease,0.171,188,2024
+North-East,60-64,Diabetes,0.225,229,2024
+North-East,60-64,Hypertension,0.315,376,2024
+North-East,60-64,Heart Disease,0.135,116,2024
+North-East,60-64,Stroke,0.072,67,2024
+North-East,60-64,Kidney Disease,0.108,99,2024
+North-East,65-69,Diabetes,0.248,175,2024
+North-East,65-69,Hypertension,0.347,367,2024
+North-East,65-69,Heart Disease,0.149,156,2024
+North-East,65-69,Stroke,0.079,79,2024
+North-East,65-69,Kidney Disease,0.119,113,2024
+North-East,70-74,Diabetes,0.27,193,2024
+North-East,70-74,Hypertension,0.378,346,2024
+North-East,70-74,Heart Disease,0.162,150,2024
+North-East,70-74,Stroke,0.086,72,2024
+North-East,70-74,Kidney Disease,0.13,125,2024
+North-East,75-79,Diabetes,0.293,316,2024
+North-East,75-79,Hypertension,0.409,563,2024
+North-East,75-79,Heart Disease,0.176,181,2024
+North-East,75-79,Stroke,0.094,98,2024
+North-East,75-79,Kidney Disease,0.14,138,2024
+North-East,80-84,Diabetes,0.315,194,2024
+North-East,80-84,Hypertension,0.441,438,2024
+North-East,80-84,Heart Disease,0.189,191,2024
+North-East,80-84,Stroke,0.101,150,2024
+North-East,80-84,Kidney Disease,0.151,145,2024
+North-East,85+,Diabetes,0.338,357,2024
+North-East,85+,Hypertension,0.472,469,2024
+North-East,85+,Heart Disease,0.202,155,2024
+North-East,85+,Stroke,0.108,132,2024
+North-East,85+,Kidney Disease,0.162,186,2024
+West,60-64,Diabetes,0.263,304,2024
+West,60-64,Hypertension,0.367,300,2024
+West,60-64,Heart Disease,0.158,201,2024
+West,60-64,Stroke,0.084,60,2024
+West,60-64,Kidney Disease,0.126,140,2024
+West,65-69,Diabetes,0.289,415,2024
+West,65-69,Hypertension,0.404,324,2024
+West,65-69,Heart Disease,0.173,153,2024
+West,65-69,Stroke,0.092,94,2024
+West,65-69,Kidney Disease,0.139,124,2024
+West,70-74,Diabetes,0.315,217,2024
+West,70-74,Hypertension,0.441,447,2024
+West,70-74,Heart Disease,0.189,148,2024
+West,70-74,Stroke,0.101,110,2024
+West,70-74,Kidney Disease,0.151,123,2024
+West,75-79,Diabetes,0.341,447,2024
+West,75-79,Hypertension,0.478,402,2024
+West,75-79,Heart Disease,0.205,191,2024
+West,75-79,Stroke,0.109,126,2024
+West,75-79,Kidney Disease,0.164,123,2024
+West,80-84,Diabetes,0.367,384,2024
+West,80-84,Hypertension,0.514,649,2024
+West,80-84,Heart Disease,0.221,149,2024
+West,80-84,Stroke,0.118,121,2024
+West,80-84,Kidney Disease,0.176,185,2024
+West,85+,Diabetes,0.394,455,2024
+West,85+,Hypertension,0.551,414,2024
+West,85+,Heart Disease,0.236,173,2024
+West,85+,Stroke,0.126,139,2024
+West,85+,Kidney Disease,0.189,200,2024

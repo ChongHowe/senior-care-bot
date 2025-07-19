@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 python-telegram-bot==20.7
 python-dotenv==1.0.0
 requests==2.31.0
@@ -20,8 +19,3 @@ xlsxwriter==3.1.9
 # Singapore-specific data sources
 beautifulsoup4==4.12.2
 lxml==4.9.3
-=======
-python-telegram-bot==20.7
-python-dotenv==1.0.0
-requests==2.31.0
->>>>>>> e6794ed6da762a27f7f904b11c4db085ac394f16
